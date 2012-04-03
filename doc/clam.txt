@@ -111,7 +111,7 @@ GitHub: http://github.com/sjl/clam.vim/
 7. Changelog                                                   *ClamChangelog*
 
 v1.1.0
-    * Add the g:clam_autorun setting.
+    * Added the g:clam_autoreturn setting.
 v1.0.0
     * Initial stable release.
 
