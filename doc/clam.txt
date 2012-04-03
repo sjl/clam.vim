@@ -1,0 +1,96 @@
+*clam.txt*   easily work with shell commands
+
+                         ___  __      __    __  __
+                        / __)(  )    /__\  (  \/  )
+                       ( (__  )(__  /(__)\  )    (
+                        \___)(____)(__)(__)(_/\/\_)
+
+          A lightweight Vim plugin for working with shell commands.
+
+==============================================================================
+CONTENTS                                                       *clam-contents*
+
+    1. Usage ........................... |ClamUsage|
+    2. Mappings ........................ |ClamMappings|
+        2.1 Refresh .................... |ClamRefresh|
+        2.2 Pipe ....................... |ClamPipe|
+    3. License ......................... |ClamLicense|
+    4. Bugs ............................ |ClamBugs|
+    5. Contributing .................... |ClamContributing|
+    6. Changelog ....................... |ClamChangelog|
+
+==============================================================================
+1. Usage                                                           *ClamUsage*
+
+The :Clam command is your point of entry to Clam.  Use it to run a shell
+command like this: >
+
+    :Clam ls -l
+
+This will open up a new vertical split with the results of the command in it.
+You can edit the text in this split like any other buffer.
+
+When you close the buffer with :quit or something similar Clam will place your
+cursor back in the split you came from.
+
+You might want to set up your own mapping to make Clam easier to use.  The
+author has something like this in his .vimrc: >
+
+    nnoremap ! :Clam<space>
+
+That's Clam in a nutclamshell.
+
+==============================================================================
+2. Mappings                                                     *ClamMappings*
+
+Clam also defines two special mappings in the command output window for your
+convenience.
+
+------------------------------------------------------------------------------
+2.1 Refresh                                                      *ClamRefresh*
+
+Bound to: <localleader>r
+
+"Refresh" the output by running the command again.
+
+This is useful for commands where the output might change frequently and you
+want to watch it in real time.
+
+------------------------------------------------------------------------------
+2.2 Pipe                                                            *ClamPipe*
+
+Bound to: <localleader>p
+
+"Pipe" the buffer through another command and replace the contents with its
+result.
+
+This allows you to run a shell pipeline where you can manually inspect and
+massage the intermediate results.
+
+==============================================================================
+3. License                                                       *ClamLicense*
+
+Clam is MIT/X11 licensed.
+
+==============================================================================
+4. Bugs                                                             *ClamBugs*
+
+If you find a bug please post it on the issue tracker:
+http://github.com/sjl/clam.vim/issues/
+
+==============================================================================
+5. Contributing                                             *ClamContributing*
+
+Think you can make this plugin better?  Awesome!  Fork it on BitBucket or
+GitHub and send a pull request.
+
+BitBucket: http://bitbucket.org/sjl/clam.vim/
+GitHub: http://github.com/sjl/clam.vim/
+
+==============================================================================
+6. Changelog                                                   *ClamChangelog*
+
+v1.0.0
+    * Initial stable release.
+
+==============================================================================
