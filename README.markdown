@@ -3,6 +3,8 @@ Clam
 
 Clam.vim is a lightweight Vim plugin to easily run shell commands.
 
+Demo: <http://www.screenr.com/2Z18>
+
 Installation and Usage
 ----------------------
 
