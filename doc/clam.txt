@@ -14,10 +14,12 @@ CONTENTS                                                       *clam-contents*
     2. Mappings ........................ |ClamMappings|
         2.1 Refresh .................... |ClamRefresh|
         2.2 Pipe ....................... |ClamPipe|
-    3. License ......................... |ClamLicense|
-    4. Bugs ............................ |ClamBugs|
-    5. Contributing .................... |ClamContributing|
-    6. Changelog ....................... |ClamChangelog|
+    3. Configuration ................... |ClamConfiguration|
+        3.1 g:clam_autoreturn .......... |ClamConfiguration_autoreturn|
+    4. License ......................... |ClamLicense|
+    5. Bugs ............................ |ClamBugs|
+    6. Contributing .................... |ClamContributing|
+    7. Changelog ....................... |ClamChangelog|
 
 ==============================================================================
 1. Usage                                                           *ClamUsage*
@@ -68,18 +70,36 @@ This allows you to run a shell pipeline where you can manually inspect and
 massage the intermediate results.
 
 ==============================================================================
-3. License                                                       *ClamLicense*
+3. Configuration                                           *ClamConfiguration*
+
+You can configure the following settings to change how Clam works.
+
+------------------------------------------------------------------------------
+3.1 g:clam_autoreturn                           *ClamConfiguration_autoreturn*
+
+Set this to 0 to disable the "return to the last buffer you were in on closing
+the output window" behavior: >
+
+    let g:clam_autoreturn = 0
+
+This can be useful if you use :bprevious (which can cause Vim to crash when
+autoreturning).
+
+Default: 1 (autoreturn is on)
+
+==============================================================================
+4. License                                                       *ClamLicense*
 
 Clam is MIT/X11 licensed.
 
 ==============================================================================
-4. Bugs                                                             *ClamBugs*
+5. Bugs                                                             *ClamBugs*
 
 If you find a bug please post it on the issue tracker:
 http://github.com/sjl/clam.vim/issues/
 
 ==============================================================================
-5. Contributing                                             *ClamContributing*
+6. Contributing                                             *ClamContributing*
 
 Think you can make this plugin better?  Awesome!  Fork it on BitBucket or
 GitHub and send a pull request.
@@ -88,7 +108,7 @@ BitBucket: http://bitbucket.org/sjl/clam.vim/
 GitHub: http://github.com/sjl/clam.vim/
 
 ==============================================================================
-6. Changelog                                                   *ClamChangelog*
+7. Changelog                                                   *ClamChangelog*
 
 v1.0.0
     * Initial stable release.

@@ -14,6 +14,10 @@ endif
 
 let loaded_clam = 1
 
+if !exists('g:clam_autoreturn') "{{{
+    let g:clam_autoreturn = 1
+endif " }}}
+
 "}}}
 " Function {{{
 
@@ -38,8 +42,10 @@ function! s:Execlam(command)
     echo 'Executing: ' . command
     silent! execute 'silent %!'. command
 
-    " When closing this buffer in any way (like :quit), jump back to the original window.
-    silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
+    if g:clam_autoreturn
+        " When closing this buffer in any way (like :quit), jump back to the original window.
+        silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
+    endif
 
     " Map <localleader>r to "refresh" the command (call it again).
     silent! execute 'nnoremap <silent> <buffer> <localleader>r :call <SID>Execlam(''' . command . ''')<cr>'
