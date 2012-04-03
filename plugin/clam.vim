@@ -42,7 +42,7 @@ function! s:Execlam(command)
     silent! execute 'au BufUnload <buffer> execute bufwinnr(' . bufnr('#') . ') . ''wincmd w'''
 
     " Map <localleader>r to "refresh" the command (call it again).
-    silent! execute 'nnoremap <silent> <buffer> <LocalLeader>r :call <SID>ExecuteInShell(''' . command . ''')<CR>:AnsiEsc<CR>'
+    silent! execute 'nnoremap <silent> <buffer> <localleader>r :call <SID>Execlam(''' . command . ''')<cr>'
 
     " Map <localleader>p to "pipe" the buffer into a new command.
     silent! execute 'nnoremap <buffer> <LocalLeader>p ggVG!'
