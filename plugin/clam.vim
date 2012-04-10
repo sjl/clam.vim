@@ -18,6 +18,10 @@ if !exists('g:clam_autoreturn') "{{{
     let g:clam_autoreturn = 1
 endif " }}}
 
+if !exists('g:clam_winpos') "{{{
+    let g:clam_winpos = 'vertical botright'
+endif "}}}
+
 "}}}
 " Function {{{
 
@@ -30,7 +34,7 @@ function! s:Execlam(command)
 
     " Open the new window (or move to an existing one).
     if winnr < 0
-        silent! execute 'botright vnew ' . fnameescape(command)
+        silent! execute g:clam_winpos . ' new ' . fnameescape(command)
     else
         silent! execute winnr . 'wincmd w'
     endif
