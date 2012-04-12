@@ -112,6 +112,15 @@ autoreturning).
 
 Default: 1 (autoreturn is on)
 
+------------------------------------------------------------------------------
+3.2 g:clam_winpos                                   *ClamConfiguration_winpos*
+
+This option control where to open output window: >
+
+    let g:clam_autoreturn = 'topleft'
+
+Default: 'vertical botright' (split vertical, open at far right)
+
 ==============================================================================
 4. License                                                       *ClamLicense*
 

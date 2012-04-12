@@ -18,6 +18,10 @@ if !exists('g:clam_autoreturn') " {{{
     let g:clam_autoreturn = 1
 endif " }}}
 
+if !exists('g:clam_winpos') "{{{
+    let g:clam_winpos = 'vertical botright'
+endif "}}}
+
 "}}}
 " Functions {{{
 
@@ -29,7 +33,7 @@ function! s:GoToClamBuffer(command) " {{{
 
     " Open the new window (or move to an existing one).
     if winnr < 0
-        silent! execute 'botright vnew ' . buffer_name
+        silent! execute g:clam_winpos . ' new ' . buffer_name
     else
         silent! execute winnr . 'wincmd w'
     endif
