@@ -35,10 +35,35 @@ You can edit the text in this split like any other buffer.
 When you close the buffer with :quit or something similar Clam will place your
 cursor back in the split you came from.
 
-You might want to set up your own mapping to make Clam easier to use.  The
+The :Clam command can take a range.  If given, the lines will be passed to the
+command on standard input.  For example, this will open a Clam output window
+with the contents of the current buffer sorted: >
+
+    :%Clam sort
+
+This will pipe the first ten lines of the file into the python command: >
+
+    :1,10Clam python
+
+To pipe visually selected text you can use the :ClamVisual command: >
+
+    :ClamVisual sort | uniq -c | sort -n
+
+When you've got some text visually selected and hit : to enter the command,
+Vim will add the '<,'> range by default.  You can backspace it out if you want
+(or use <c-u>), but you don't have to: ClamVisual will work fine with or
+without it.
+
+In other words, the following commands do the same thing: >
+
+    :ClamVisual wc -c
+    :'<,'>ClamVisual wc -c
+
+You might want to set up your own mappings to make Clam easier to use.  The
 author has something like this in his .vimrc: >
 
     nnoremap ! :Clam<space>
+    vnoremap ! :ClamVisual<space>
 
 That's Clam in a nutclamshell.
 
@@ -110,6 +135,9 @@ GitHub: http://github.com/sjl/clam.vim/
 ==============================================================================
 7. Changelog                                                   *ClamChangelog*
 
+v1.2.0
+    * Added support for ranges in the :Clam command.
+    * Added the :ClamVisual command.
 v1.1.0
     * Added the g:clam_autoreturn setting.
 v1.0.0
