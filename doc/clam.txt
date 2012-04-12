@@ -119,6 +119,9 @@ This option control where to open output window: >
 
     let g:clam_autoreturn = 'topleft'
 
+See the following topics for more information: |:vertical|, |:aboveleft|,
+|:belowright|, |:topleft|, and |:botright|.
+
 Default: 'vertical botright' (split vertical, open at far right)
 
 ==============================================================================
@@ -147,6 +150,7 @@ GitHub: http://github.com/sjl/clam.vim/
 v1.2.0
     * Added support for ranges in the :Clam command.
     * Added the :ClamVisual command.
+    * Added the g:clam_winpos option.
 v1.1.0
     * Added the g:clam_autoreturn setting.
 v1.0.0
