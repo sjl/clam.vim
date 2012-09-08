@@ -38,18 +38,18 @@ function! s:GoToClamBuffer(command) " {{{
         silent! execute winnr . 'wincmd w'
     endif
 endfunction " }}}
-function! s:ExtractBareCommanName(fullCommand)
+function! s:ExtractBareCommanName(fullCommand) " {{{
     let j = stridx(a:fullCommand, " ")
     if j > -1
         return a:fullCommand[0:j-1]
     endif
     return a:fullCommand
-endfunction
-function! s:ApplySyntaxFileForCommand(command)
+endfunction " }}}
+function! s:ApplySyntaxFileForCommand(command) " {{{
     let barecommand = s:ExtractBareCommanName(a:command)
     let syntaxfile = "clamsyntax/" . barecommand . ".vim"
     exe "runtime! " . syntaxfile
-endfunction
+endfunction " }}}
 function! s:ConfigureCurrentClamBuffer(command) " {{{
     " Set some basic options for the output window.
     setlocal buftype=nowrite bufhidden=wipe nobuflisted noswapfile nowrap nonumber

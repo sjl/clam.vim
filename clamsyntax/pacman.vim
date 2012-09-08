@@ -1,6 +1,5 @@
 " pacman program output syntax rules for Clam.vim
 
-" syn match outputItemLineFirst "\^\S\+/\.\+\>"
 syn match packageName "/\S\+\>"
 
 syn keyword packageGroupExtra extra
@@ -14,4 +13,3 @@ hi def link packageGroupExtra     Type
 hi def link packageGroupMultilib  Type
 hi def link packageInstalledMark  Error
 hi def link packageName           String
-" hi def link outputItemLineFirst Comment
