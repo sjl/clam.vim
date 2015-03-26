@@ -11,7 +11,8 @@ Installation and Usage
 Use Pathogen to install.
 
 Read the docs for more information:
-<http://vim-doc.heroku.com/view?https://raw.github.com/sjl/clam.vim/master/doc/clam.txt>
+<http://vim-doc.herokuapp.com/view?https://raw.githubusercontent.com/sjl/clam.vim/master/doc/clam.txt>
+
 
 License
 -------
