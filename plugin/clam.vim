@@ -34,6 +34,9 @@ function! s:GoToClamBuffer(command) " {{{
     " Open the new window (or move to an existing one).
     if winnr < 0
         silent! execute g:clam_winpos . ' new ' . buffer_name
+        if exists('g:clam_winheight') "{{{
+          silent! execute 'resize ' . g:clam_winheight
+        endif "}}}
 
         " Highlight ANSI color codes if the AnsiEsc plugin is present.
         if exists("g:loaded_AnsiEscPlugin")
@@ -41,6 +44,9 @@ function! s:GoToClamBuffer(command) " {{{
         endif
     else
         silent! execute winnr . 'wincmd w'
+        if exists('g:clam_winheight') "{{{
+          silent! execute 'resize ' . g:clam_winheight
+        endif "}}}
     endif
 endfunction " }}}
 function! s:ExtractBareCommanName(fullCommand) " {{{

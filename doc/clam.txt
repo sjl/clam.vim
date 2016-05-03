@@ -16,6 +16,8 @@ CONTENTS                                                       *clam-contents*
         2.2 Pipe ....................... |ClamPipe|
     3. Configuration ................... |ClamConfiguration|
         3.1 g:clam_autoreturn .......... |ClamConfiguration_autoreturn|
+        3.2 g:clam_winpos .............. |ClamConfiguration_winpos|
+        3.3 g:clam_winheight ........... |ClamConfiguration_winheight|
     4. License ......................... |ClamLicense|
     5. Bugs ............................ |ClamBugs|
     6. Contributing .................... |ClamContributing|
@@ -123,6 +125,15 @@ See the following topics for more information: |:vertical|, |:aboveleft|,
 |:belowright|, |:topleft|, and |:botright|.
 
 Default: 'vertical botright' (split vertical, open at far right)
+
+------------------------------------------------------------------------------
+3.3 g:clam_winheight                             *ClamConfiguration_winheight*
+
+This option controls the height of the output window: >
+
+    let g:clam_winheight = 5
+
+Default: no value (horizontal split at 50%)
 
 ==============================================================================
 4. License                                                       *ClamLicense*
