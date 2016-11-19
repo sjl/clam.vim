@@ -18,6 +18,7 @@ CONTENTS                                                       *clam-contents*
         3.1 g:clam_autoreturn .......... |ClamConfiguration_autoreturn|
         3.2 g:clam_winpos .............. |ClamConfiguration_winpos|
         3.3 g:clam_winheight ........... |ClamConfiguration_winheight|
+        3.4 g:clam_winwidth ............ |ClamConfiguration_winwidth|
     4. License ......................... |ClamLicense|
     5. Bugs ............................ |ClamBugs|
     6. Contributing .................... |ClamContributing|
@@ -117,7 +118,7 @@ Default: 1 (autoreturn is on)
 ------------------------------------------------------------------------------
 3.2 g:clam_winpos                                   *ClamConfiguration_winpos*
 
-This option control where to open output window: >
+This option controls where to open output window: >
 
     let g:clam_winpos = 'topleft'
 
@@ -133,7 +134,16 @@ This option controls the height of the output window: >
 
     let g:clam_winheight = 5
 
-Default: no value (horizontal split at 50%)
+Default: no value (split at 50%)
+
+------------------------------------------------------------------------------
+3.4 g:clam_winwidth                               *ClamConfiguration_winwidth*
+
+This option controls the width of the output window: >
+
+    let g:clam_winwidth = 5
+
+Default: no value (split at 50%)
 
 ==============================================================================
 4. License                                                       *ClamLicense*
@@ -158,6 +168,10 @@ GitHub: http://github.com/sjl/clam.vim/
 ==============================================================================
 7. Changelog                                                   *ClamChangelog*
 
+v1.4.0
+    * Added g:clam_winheight and g:clam_winwidth settings (thanks jethrovt).
+    * Don't highlght ANSI color codes more often than needed (thanks LnL7).
+    * Improved highlighting for hg status output.
 v1.3.0
     * Added support for custom syntax highlighting for commands (thanks to Ümit
       Kablan).
