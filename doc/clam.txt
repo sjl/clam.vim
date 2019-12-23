@@ -159,11 +159,11 @@ http://github.com/sjl/clam.vim/issues/
 ==============================================================================
 6. Contributing                                             *ClamContributing*
 
-Think you can make this plugin better?  Awesome!  Fork it on BitBucket or
+Think you can make this plugin better?  Awesome!  Fork it on Source Hut or
 GitHub and send a pull request.
 
-BitBucket: http://bitbucket.org/sjl/clam.vim/
-GitHub: http://github.com/sjl/clam.vim/
+Source Hut: https://hg.sr.ht/~sjl/clam.vim/
+GitHub: https://github.com/sjl/clam.vim/
 
 ==============================================================================
 7. Changelog                                                   *ClamChangelog*
